@@ -1,15 +1,11 @@
-import { MongoClient } from 'mongodb';
-import dotenv from 'dotenv';
+import { MongoClient } from "mongodb"
 
-dotenv.config();
+import dotenv from 'dotenv'
 
-const URI = process.env.MONGO_URI;
+dotenv.config()
 
-if (!URI) {
-    console.error('A variável MONGO_URI não está definida!');
-    process.exit(1); // Encerra o servidor se a variável não estiver definida
-}
+const URI = process.env.MONGO_URI
 
-const client = new MongoClient(URI);
+const client = new MongoClient(URI)
 
-export const db = client.db('spotifyAula'); // Banco de dados 'spotifyAula' no MongoDB
+export const db = client.db("spotifyAula")
